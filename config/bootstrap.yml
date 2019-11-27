@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: local
+server:
+  port: ${ports.${spring.application.name}}
+ports:
+  server: 8000
+  client: 8001
+
+---
+spring:
+  profiles: local
+  cloud:
+    zookeeper:
+      connect-string: 172.16.159.20:2181,172.16.159.20:2182,172.16.159.20:2183
+      discovery:
+        root: /xuweizhi
+        enabled: true
