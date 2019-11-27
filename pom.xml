@@ -12,6 +12,7 @@
     <modules>
         <module>zk-server</module>
         <module>zk-client</module>
+        <module>common</module>
     </modules>
 
     <repositories>
