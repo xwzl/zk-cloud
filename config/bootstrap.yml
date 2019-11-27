@@ -11,15 +11,15 @@ spring:
   profiles: home
   cloud:
     zookeeper:
-      connect-string: 172.16.159.20:2181,172.16.159.20:2182,172.16.159.20:2183
+      connect-string: 192.168.20.130:2181,192.168.20.130:2182,192.168.20.130:2183
       discovery:
         root: /xuweizhi
         enabled: true
     nacos:
       config:
         group: ${spring.application.name}
-        server-addr: 47.105.218.58:8848
-        namespace: 81593e13-8a1e-452a-8350-da032cef5e14
+        server-addr: 192.168.20.130:8848
+        namespace: b578d59f-a85c-4ef5-89f5-d4830ef989fb
         file-extension: yaml
         ext-config:
           - dataId: base-config.yaml
