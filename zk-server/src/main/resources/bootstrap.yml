@@ -1,3 +1,12 @@
 spring:
   application:
     name: server
+  cloud:
+    nacos:
+      config:
+        group: ${spring.application.name}
+        server-addr: 47.105.218.58:8848
+        namespace: 81593e13-8a1e-452a-8350-da032cef5e14
+        file-extension: yaml
+        ext-config:
+          - dataId: base-config.yaml

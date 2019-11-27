@@ -1,12 +1,28 @@
 spring:
   profiles:
-    active: local
+    active: home
 server:
   port: ${ports.${spring.application.name}}
 ports:
   server: 8000
   client: 8001
-
+---
+spring:
+  profiles: home
+  cloud:
+    zookeeper:
+      connect-string: 172.16.159.20:2181,172.16.159.20:2182,172.16.159.20:2183
+      discovery:
+        root: /xuweizhi
+        enabled: true
+    nacos:
+      config:
+        group: ${spring.application.name}
+        server-addr: 47.105.218.58:8848
+        namespace: 81593e13-8a1e-452a-8350-da032cef5e14
+        file-extension: yaml
+        ext-config:
+          - dataId: base-config.yaml
 ---
 spring:
   profiles: local
@@ -16,3 +32,11 @@ spring:
       discovery:
         root: /xuweizhi
         enabled: true
+    nacos:
+      config:
+        group: ${spring.application.name}
+        server-addr: 47.105.218.58:8848
+        namespace: 81593e13-8a1e-452a-8350-da032cef5e14
+        file-extension: yaml
+        ext-config:
+          - dataId: base-config.yaml

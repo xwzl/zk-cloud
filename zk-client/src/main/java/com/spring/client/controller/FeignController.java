@@ -17,10 +17,14 @@ import javax.annotation.Resource;
 public class FeignController {
 
     @Resource
-    FeginService feginService;
+    private FeginService feginService;
+
+    @Resource
+    private NacosRefresh nacosRefresh;
 
     @GetMapping("msg")
     public String msg() {
+        nacosRefresh.getTest();
         return feginService.test();
     }
 }
