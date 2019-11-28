@@ -19,7 +19,7 @@ spring:
       config:
         group: ${spring.application.name}
         server-addr: 192.168.20.130:8848
-        namespace: b578d59f-a85c-4ef5-89f5-d4830ef989fb
+        namespace: 8ecacf11-15ea-44d8-b639-bb1d9c9a3c23
         file-extension: yaml
         ext-config:
           - dataId: base-config.yaml

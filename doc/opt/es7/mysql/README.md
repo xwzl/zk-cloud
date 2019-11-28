@@ -17,3 +17,22 @@
     systemctl list-unit-files|grep enabled          #查看已启动的服务列表
     systemctl --failed                              #查看启动失败的服务列表
 
+修改 mysql 8.0 不能访问的问题
+
+    # 进入 Mysql 容器,bash并进入mysql命令行
+    docker exec -it mysql bash
+    
+    # 登录 Mysql
+    mysql -uroot -proot
+    
+    //使用mysql数据库
+    use mysql
+    
+    //修改加密方式
+    ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+    
+    //重新修改密码后可连接成功
+    alter  user 'root'@'%' identified by 'root';
+    
+    //刷新数据库
+    flush privileges;
