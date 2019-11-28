@@ -65,13 +65,10 @@ services:
     ports:
       - "9100:9100"
 #  kibana:
-#    image: docker.elastic.co/kibana/kibana:6.4.3
+#    image: kibana
 #    container_name: kibana
 #    environment:
 #      ELASTICSEARCH_URL: http://172.16.159.20:9200
-#      SERVER_HOST: 172.16.159.20
-#    depends_on:
-#      - node1
 #    restart: always
 #    ports:
 #      - 5061:5061
