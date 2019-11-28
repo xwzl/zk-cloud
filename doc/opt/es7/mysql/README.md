@@ -36,3 +36,15 @@
     
     //刷新数据库
     flush privileges;
+
+### 调高JVM线程数限制数量
+
+    在centos窗口中，修改配置sysctl.conf
+    
+    vi /etc/sysctl.conf
+    加入如下内容：
+    
+    vm.max_map_count=262144
+    启用配置：
+    
+    sysctl -p
