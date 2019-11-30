@@ -59,6 +59,7 @@ services:
     hostname: filebeat
     # 镜像
     image: docker.elastic.co/beats/filebeat:7.1.1
+    entrypoint: "filebeat -e -strict.perms=false"
     # 重启机制
     restart: always
     # 持久化挂载

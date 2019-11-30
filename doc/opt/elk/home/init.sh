@@ -101,7 +101,7 @@ fi
 
 echo -e "${VIOLET_COLOR}---> move [mysql]config file start.${RES}"
 if [ -f "./my.cnf" ]; then
-mv ./my.cnf ./mysql/conf mv
+mv ./my.cnf ./mysql/conf
 fi
 
 echo -e "${VIOLET_COLOR}---> move [nacos]config file start.${RES}"
